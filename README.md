@@ -43,11 +43,12 @@ c1|stream create daxiq=1 port=7791
 ```
 
 These commands reserve the port and tell the radio to start output
-of DAXUIQ data to that UDP port.
+of DAXIQ data to that UDP port.
 Leave the nc session running in its own window; you will need it
 later to shut down the DAXIQ output. After you did the create stream,
 the FlexRadio should have displayed the stream number in an 8-digit
 hexadecimal number such as 0x20000001.
+
 8. This should start a stream of DAXIQ data coming to port 7791. These
 buffers comply with the VITA-49 SDR data standard. You shoujld be
 able to see the data streaming by using: sudo tcpdump -i eth0 udp -XX port 7791
@@ -59,9 +60,12 @@ it should display the FFT bin# with the strongest signal magnitude, and
 this magnitude will ne shown also. Remember that DAXIQ data is relative
 to the center frequency of the panadapter itself (not to the frequency
 displayed on the subwindow used to set the radio's frequency).
-9. You may shut down the DAXIQ output using your nc sessino:
-c3|stream remove 0x20000001       <- this is the stream number the
-FlexRadio gave you in Step 7, above. (Note, if you don't shut down
+
+9. You may shut down the DAXIQ output using your nc session:
+```
+c3|stream remove 0x20000001
+```
+This uses the stream number the FlexRadio gave you in Step 7, above. (Note, if you don't shut down
 DAXIQ in the same session as you created it, the FlexRadio will not
 let you stop it in another session).
 
