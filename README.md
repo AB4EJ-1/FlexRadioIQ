@@ -25,8 +25,11 @@ address of your FlexRadio under Settings->Radio Setup->Network.
 For this application, it works best to configure the FlexRadio to
 use a static IP address. Example settings might be: IP Address = 
 192.168.1.68  Mask = 255.255.255.0  Gateway 192.168.1.254 . Now
-on the computer you would use:   nc 192.168.1.66 4992 to start
-controlling the radio. When you have connected, the FlexRadio will
+on the computer you would use:
+```
+nc 192.168.1.66 4992
+```
+...to start controlling the radio. When you have connected, the FlexRadio will
 send your terminal a response showing many of its current settings.
 7. Now that you have connected to the FlexRadio, you can start to
 command it. Bear in mind that the FlexRadio expects your commands to
