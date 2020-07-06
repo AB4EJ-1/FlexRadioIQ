@@ -72,5 +72,8 @@ let you stop it in another session).
 For more information about the flexRadio command set, see:
 http://wiki.flexradio.com/index.php?title=SmartSDR_TCP/IP_API
 
+For more information about the VITA-49 standard, see:
+https://www.redrapids.com/images/whitepapers/TWP-000-001-R00.pdf
 
+One might ask why I use nc terminal to start the IQ stream instead of doing that with a TCP socket in the program. There is something needed to make that work that has so far eluded me; if I get it working, I will post an update.
 
