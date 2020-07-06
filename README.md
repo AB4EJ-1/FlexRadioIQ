@@ -35,7 +35,8 @@ command:
 ```
 c0|client udpport 7791        
 c1|stream create daxiq=1 port=7791
-'''
+```
+
 These commands reserve the port and tell the radio to start output
 of DAXUIQ data to that UDP port.
 Leave the nc session running in its own window; you will need it
