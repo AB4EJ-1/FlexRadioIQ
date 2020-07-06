@@ -4,8 +4,10 @@ using a Linux computer connected to the radio through a switch.
 
 How to use it:
 1. Install the fft fast fourier transform package on your system:
- ```sudo apt-get update
- sudo apt-get install fftw-dev```
+ ```
+ sudo apt-get update
+ sudo apt-get install fftw-dev
+ ```
 2. Clone this repository to a convenient directory on your system.
 3. Navigate to the directory when you have the source and use:  make
 This should compile the program. Note that the code looks for the
