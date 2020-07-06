@@ -31,8 +31,13 @@ send your terminal a response showing many of its current settings.
 7. Now that you have connected to the FlexRadio, you can start to
 command it. Bear in mind that the FlexRadio expects your commands to
 begin with "C" and to each have an increasing serial number. Send the
-command:     c0|client udpport 7791            (this reserves the port)
-Now use:     c1|stream create daxiq=1 port=7791
+command:     
+```
+c0|client udpport 7791        
+c1|stream create daxiq=1 port=7791
+'''
+These commands reserve the port and tell the radio to start output
+of DAXUIQ data to that UDP port.
 Leave the nc session running in its own window; you will need it
 later to shut down the DAXIQ output. After you did the create stream,
 the FlexRadio should have displayed the stream number in an 8-digit
